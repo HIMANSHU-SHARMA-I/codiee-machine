@@ -8,8 +8,9 @@
   .ask{
     flex-direction: column;
     justify-content: space-around;
-    margin-left: 65px;
+    margin-left: 70px;
     padding: 15px;
+   
   }
   .askheading
   {
