@@ -81,7 +81,7 @@ function showPreview(){
  
     
     document.getElementsByClassName('askform')[0].innerHTML =`<${document.getElementsByClassName('size')[0].value}> ${document.getElementsByClassName('title')[0].value}</${document.getElementsByClassName('size')[0].value}>
-    <br>
+    
     <p> ${document.getElementsByClassName('para')[0].value}</p>`
 
     
