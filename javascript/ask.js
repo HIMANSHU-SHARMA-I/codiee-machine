@@ -1,6 +1,6 @@
 //for tthe buttons to show the code and preview
 document.getElementsByClassName('buttons')[0].innerHTML = `<button type="button" class="btn btn-primary">See Code</button>
-<button type="button" class="btn btn-info">Preview</button>`
+<button type="button" class="btn btn-info" onclick="showPreview()">Preview</button>`
 ///////////////////////////////////////////////////////
 
 // for the asking number of the block in code 
@@ -10,7 +10,7 @@ document.getElementById('showopt').addEventListener("click", (event) => {
     showall(numberOfHeading.value)
 
   } else {
-    document.getElementsByClassName('alert-danger')[0].innerText = "Fraction Numer are not allowed, Please Insert integer ..."
+    document.getElementsByClassName('alert-danger')[0].innerText = "Fraction Numers and Zero are not allowed, Please Insert integer ..."
     document.getElementsByClassName('alert-danger')[0].style.display = "block"
 
   }
@@ -33,11 +33,11 @@ function showall(param) {
         <div class="form-row">
             <div class="col-md-6 mb-3">
               <label for="validationDefault03" style="background-color:#D9ECC7; width:100%">Title ${i + 1}</label>
-              <input type="text" class="form-control tit${i + 1}" id="validationDefault0${i + 1}" required >
+              <input type="text" class="form-control title" id="validationDefault0${i + 1}" required >
             </div>
             <div class="col-md-3 mb-3">
               <label for="validationDefault04" style="background-color:#D7EDE2; width:100%">Size</label>
-              <select class="custom-select size${i + 1}" id="validationDefault${i + 1}" required>
+              <select class="custom-select size" id="validationDefault00${i + 1}" required>
                 <!-- <option selected disabled value="">Choose...</option> -->
                 <option>h1</option>
                 <option>h2</option>
@@ -49,13 +49,13 @@ function showall(param) {
             </div>
             <div class="col-md-3 mb-3">
               <label for="validationDefault05" style="background-color:#CCFBFF; width:100%">color</label>
-              <input type="text" class="form-control color${i + 1}" id="validationDefaul${i + 1}" required>
+              <input type="text" class="form-control color" id="validationDefaul00${i + 1}1" required placeholder="eg : red or #D9ECC7">
             </div>
           </div>
 
           <div class="input-group">
   <span class="input-group-text">${i + 1}'s Paragraph</span>
-  <textarea class="form-control para${i + 1}" aria-label="With textarea"></textarea>
+  <textarea class="form-control para" aria-label="With textarea"></textarea>
 </div>
          
 
@@ -67,6 +67,23 @@ function showall(param) {
 
 
   } else {
+    
     document.getElementsByClassName('buttons')[0].style.display = "none"
+
   }
+}
+
+///options ends here now code for the preview and  see code
+
+// for the preview code starts from here 
+function showPreview(){
+  
+ 
+    
+    document.getElementsByClassName('askform')[0].innerHTML =`<${document.getElementsByClassName('size')[0].value}> ${document.getElementsByClassName('title')[0].value}</${document.getElementsByClassName('size')[0].value}>
+    <br>
+    <p> ${document.getElementsByClassName('para')[0].value}</p>`
+
+    
+  
 }
